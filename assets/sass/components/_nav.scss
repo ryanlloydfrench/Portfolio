@@ -1,0 +1,21 @@
+.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+    li {
+        display: inline-block;
+        margin-right: 30px;
+        padding-bottom: 5px;
+        border-bottom: 2px solid white;
+        transition: border $fast-transition;
+        &:last-child {
+            margin-right: 0;
+        }
+        &:hover,
+        &:focus {
+            border-bottom-color: $alternate-bg-color;
+            transition: border $fast-transition;
+        }
+    }
+}
