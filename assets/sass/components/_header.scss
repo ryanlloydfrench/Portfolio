@@ -4,8 +4,12 @@ header {
 }
 
 .logo {
-    width: 28px;
-    height: 28px;
-    fill: $primary-color;
+    display: inline-block;
     float: left;
+    svg {
+        width: 28px;
+        height: 28px;
+        fill: $primary-color;
+    }
+}
 }
