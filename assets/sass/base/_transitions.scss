@@ -1,1 +1,32 @@
 $fast-transition: 300ms;
+
+.animated-scene {
+    .animated-element {
+        -webkit-animation-duration: 1000ms;
+        animation-duration: 1000ms;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+    .animated-element-fadein {
+        -webkit-animation-name: fadeIn;
+        animation-name: fadeIn;
+    }
+    .animated-element-fadeindown {
+        -webkit-animation-name: fadeInDown;
+        animation-name: fadeInDown;
+    }
+    &.is-exiting {
+        .animated-element {
+            -webkit-animation-direction: alternate-reverse;
+            animation-direction: alternate-reverse;
+        }
+        .animated-element-delayed {
+            -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+        }
+        .animated-element-noexiting {
+            -webkit-animation-direction: alternate-reverse;
+            animation-direction: alternate-reverse;
+        }
+    }
+}
