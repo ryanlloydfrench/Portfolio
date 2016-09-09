@@ -1,7 +1,19 @@
+$avenir: "Avenir Next W01";
+$ffmeta: "FF Meta Serif W01";
+$proximanova: "Proxima Nova W01";
+
 body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-family:"Avenir Next W01", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-family: $avenir , "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-size: 17px;
     font-weight: 600;
+}
+
+.uppercase-text {
+    font-family: $proximanova;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
 }

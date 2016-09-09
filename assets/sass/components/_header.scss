@@ -1,14 +1,14 @@
 header {
-    background-color: #FFFFFF;
-    padding: 3rem 4rem;
+    background-color: $secondary-bg-color;
+    padding: 2.5rem 4rem;
 }
 
 .logo {
     display: inline-block;
     float: left;
     svg {
-        width: 28px;
-        height: 28px;
+        width: 30px;
+        height: 30px;
         fill: $primary-color;
     }
 }

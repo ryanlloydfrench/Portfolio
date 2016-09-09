@@ -13,7 +13,11 @@ body {
     background-color: $primary-bg-color;
 }
 
-.content-wrapper {
+.wrapper {
     margin: 0 auto;
     max-width: 1600px;
+}
+
+.content-padding {
+    padding: 3rem 4rem;
 }

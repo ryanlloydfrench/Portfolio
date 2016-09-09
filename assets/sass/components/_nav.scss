@@ -5,13 +5,14 @@ nav {
 
 nav ul {
     list-style-type: none;
-    margin: 4px 0 0;
+    margin: 6px 0 0;
     padding: 0;
+    @extend .uppercase-text;
     li {
         display: inline-block;
         margin-right: 30px;
         padding-bottom: 5px;
-        border-bottom: 2px solid white;
+        border-bottom: 2px solid $secondary-bg-color;
         transition: border $fast-transition;
         a {
             text-decoration: none;
