@@ -1,14 +1,23 @@
 header {
-    background-color: $secondary-bg-color;
-    padding: 2.5rem 4rem;
+    text-align: center;
 }
 
-.logo {
-    display: inline-block;
-    float: left;
-    svg {
-        width: 35px;
-        height: 35px;
-        fill: $primary-color;
+.header {
+    &__title {
+        font-family: $ffmeta;
+        font-weight: 200;
+        font-size: 30px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    &__sub-title {
+        @extend .uppercase-text-large;
+        margin: 0;
+    }
+    &__break {
+        width: 80px;
+        height: 3px;
+        background-color: $alt-color;
+        margin: 1.2rem auto;
     }
 }

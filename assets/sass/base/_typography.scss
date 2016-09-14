@@ -10,10 +10,19 @@ body {
     font-weight: 600;
 }
 
-.uppercase-text {
+.uppercase-text-small {
     font-family: $proximanova;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 14px;
+}
+
+.uppercase-text-large {
+    font-family: $proximanova;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 30px;
+    line-height: 40px;
 }

@@ -8,9 +8,15 @@ html {
   box-sizing: inherit;
 }
 
+::selection,
+::-moz-selection {
+    color: white;
+    background-color: $alt-color;
+}
+
 body {
-    color: $primary-color;
-    background-color: $primary-bg-color;
+    color: $text-color;
+    background-color: $bg-color;
 }
 
 .wrapper {
@@ -19,5 +25,5 @@ body {
 }
 
 .content-padding {
-    padding: 3rem 4rem;
+    padding: 4.5rem 4rem;
 }

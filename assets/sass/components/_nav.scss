@@ -1,32 +1,52 @@
 nav {
-    display: inline-block;
-    float: right;
+    position: relative;
+    background-color: $bg-color-secondary;
+    padding: 2.5rem 4rem;
+    z-index: 99;
 }
 
-nav ul {
+.nav__logo {
+    display: inline-block;
+    float: left;
+    &:hover,
+    &:focus {
+        svg {
+            fill: $alt-color;
+        }
+    }
+    svg {
+        width: 35px;
+        height: 35px;
+        fill: $text-color;
+    }
+}
+
+.nav__links {
     list-style-type: none;
     margin: 6px 0 0;
     padding: 0;
-    @extend .uppercase-text;
+    display: inline-block;
+    float: right;
+    @extend .uppercase-text-small;
     li {
         display: inline-block;
         margin-right: 30px;
         padding-bottom: 5px;
-        border-bottom: 2px solid $secondary-bg-color;
+        border-bottom: 2px solid $bg-color-secondary;
         transition: border $fast-transition;
         a {
             text-decoration: none;
-            color: $primary-color;
+            color: $text-color;
         }
         &.active {
-            border-bottom-color: $alternate-bg-color;
+            border-bottom-color: $alt-color;
         }
         &:last-child {
             margin-right: 0;
         }
         &:hover,
         &:focus {
-            border-bottom-color: $alternate-bg-color;
+            border-bottom-color: $alt-color;
             transition: border $fast-transition;
         }
     }
