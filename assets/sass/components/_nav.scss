@@ -20,6 +20,7 @@ nav {
         width: 35px;
         height: 35px;
         fill: $text-color;
+        transition: fill $fast-transition;
         @include small-tablet {
             width: 26px;
             height: 26px;
@@ -42,7 +43,7 @@ nav {
         margin-right: 30px;
         padding-bottom: 5px;
         border-bottom: 2px solid $bg-color-secondary;
-        transition: border $fast-transition;
+        transition: border-color $fast-transition;
         a {
             text-decoration: none;
             color: $text-color;
@@ -56,7 +57,7 @@ nav {
         &:hover,
         &:focus {
             border-bottom-color: $alt-color;
-            transition: border $fast-transition;
+            transition: border-color $fast-transition;
         }
     }
 }

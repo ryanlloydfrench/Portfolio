@@ -1,43 +1,56 @@
 $(document).ready(function() {
-    slideout();
-});
+    'use strict';
 
-function slideout() {
-    var slideout = new Slideout({
-      'panel': document.getElementById('slideout-content'),
-      'menu': document.getElementById('slideout-nav'),
-      'padding': 256,
-      'tolerance': 70,
-      'side': 'right'
-    });
+    var slideout;
 
-    $('.mobile-nav__icon').on('click', function() {
-        slideout.toggle();
-    });
-}
-
-$(function(){
-  'use strict';
-  var options = {
-    prefetch: true,
-    cacheLength: 2,
-    onStart: {
-      duration: 860,
-      render: function ($container) {
-        $container.addClass('is-exiting');
-        smoothState.restartCSSAnimations();
-      }
-    },
-    onReady: {
-      duration: 0,
-      render: function ($container, $newContent) {
-        $container.removeClass('is-exiting');
-        $container.html($newContent);
-      }
-    },
-    onAfter: function() {
-        slideout();
+    function initSlideout() {
+        slideout = new Slideout({
+            'panel': document.getElementById('slideout-content'),
+            'menu': document.getElementById('slideout-nav'),
+            'padding': 256,
+            'tolerance': 70,
+            'side': 'right'
+        });
+        $('.mobile-nav__icon').on('click', function() {
+            slideout.toggle();
+        });
     }
-  },
-  smoothState = $('#animate-wrapper').smoothState(options).data('smoothState');
+    initSlideout();
+
+    var options = {
+            prefetch: true,
+            cacheLength: 2,
+            onStart: {
+                duration: 860,
+                render: function($container) {
+                    $container.addClass('is-exiting');
+                    smoothState.restartCSSAnimations();
+                    slideout.close();
+                }
+            },
+            onReady: {
+                duration: 0,
+                render: function($container, $newContent) {
+                    $container.removeClass('is-exiting');
+                    $container.html($newContent);
+                    initSlideout();
+                }
+            }
+        },
+        smoothState = $('#animate-wrapper').smoothState(options).data('smoothState');
+
+    var resizeId;
+    var windowSize = $(window).width();
+
+    $(window).resize(function() {
+        clearTimeout(resizeId);
+        resizeId = setTimeout(doneResizing, 500);
+    });
+
+    function doneResizing() {
+        if (windowSize >= 768) {
+            slideout.close();
+        }
+    }
+
 });

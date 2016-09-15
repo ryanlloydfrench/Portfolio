@@ -35,6 +35,7 @@
         a {
             color: $text-color;
             text-decoration: none;
+            transition: color $fast-transition;
             &:hover,
             &:focus {
                 color: $alt-color;
