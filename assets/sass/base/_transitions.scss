@@ -1,57 +1,94 @@
 $fast-transition: 300ms;
 
+.animation-default {
+    animation-duration: 400ms;
+    animation-fill-mode: both;
+    transition:         all cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
 .animated-scene {
-    .animated-element-fadein {
-        -webkit-animation-name: fadeIn;
-        animation-name: fadeIn;
+    .animated-element--titlebreakfadeindown {
+        @extend .animation-default;
+        animation-name: titleBreakFadeInDown;
     }
-    .animated-element-navfadeindown {
-        -webkit-animation-duration: 400ms;
-        animation-duration: 400ms;
-        -webkit-animation-fill-mode: both;
-        animation-fill-mode: both;
-        -webkit-animation-name: navFadeInDown;
+    .animated-element--titlefadeindown {
+        @extend .animation-default;
+        animation-name: titleFadeInDown;
+    }
+    .animated-element--navfadeindown {
+        @extend .animation-default;
         animation-name: navFadeInDown;
-        -webkit-transition: all cubic-bezier(0.165, 0.84, 0.44, 1);
-        transition:         all cubic-bezier(0.165, 0.84, 0.44, 1);
     }
-    .animated-element-logofadeindown {
-        -webkit-animation-duration: 400ms;
-        animation-duration: 400ms;
-        -webkit-animation-fill-mode: both;
-        animation-fill-mode: both;
-        -webkit-animation-name: logoFadeInDown;
+    .animated-element--logofadeindown {
+        @extend .animation-default;
         animation-name: logoFadeInDown;
-        -webkit-transition: all cubic-bezier(0.165, 0.84, 0.44, 1);
-        transition:         all cubic-bezier(0.165, 0.84, 0.44, 1);
     }
     &.is-exiting {
-        .animated-element-logofadeindown,
-        .animated-element-navfadeindown {
-            -webkit-animation-direction: alternate-reverse;
-            animation-direction: alternate-reverse;
-        }
-        .animated-element-delayed {
-            -webkit-animation-delay: 0s;
-            animation-delay: 0s;
-        }
-        .animated-element-noexiting {
-            -webkit-animation-direction: alternate-reverse;
+        .animated-element--titlebreakfadeindown,
+        .animated-element--titlefadeindown,
+        .animated-element--logofadeindown,
+        .animated-element--navfadeindown {
             animation-direction: alternate-reverse;
         }
     }
 }
 
-@-webkit-keyframes logoFadeInDown {
+@-webkit-keyframes titleBreakFadeInDown {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -1000%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes titleBreakFadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -1000%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@-webkit-keyframes titleFadeInDown {
+  from {
+    opacity: 0;
     transform: translate3d(0, -100%, 0);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes titleFadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@-webkit-keyframes logoFadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
     transform: none;
   }
 }
@@ -59,13 +96,11 @@ $fast-transition: 300ms;
 @keyframes logoFadeInDown {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
     transform: translate3d(0, -100%, 0);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: none;
     transform: none;
   }
 }
@@ -73,13 +108,11 @@ $fast-transition: 300ms;
 @-webkit-keyframes navFadeInDown {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(0, -250%, 0);
     transform: translate3d(0, -250%, 0);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: none;
     transform: none;
   }
 }
@@ -87,29 +120,40 @@ $fast-transition: 300ms;
 @keyframes navFadeInDown {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(0, -250%, 0);
     transform: translate3d(0, -250%, 0);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: none;
     transform: none;
   }
+}
+
+.header {
+    &__title {
+        animation-delay: 140ms;
+    }
+    &__break {
+        animation-delay: 20ms;
+    }
+    &__sub-title {
+
+    }
+}
+
+.nav__logo {
+    animation-delay: 220ms;
 }
 
 nav {
     ul li {
         &:nth-child(1) {
-            -webkit-animation-delay: 300ms;
             animation-delay: 300ms;
         }
         &:nth-child(2) {
-            -webkit-animation-delay: 380ms;
             animation-delay: 380ms;
         }
         &:nth-child(3) {
-            -webkit-animation-delay: 460ms;
             animation-delay: 460ms;
         }
     }

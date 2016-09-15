@@ -21,7 +21,7 @@ $(document).ready(function() {
             prefetch: true,
             cacheLength: 2,
             onStart: {
-                duration: 860,
+                duration: 1100,
                 render: function($container) {
                     $container.addClass('is-exiting');
                     smoothState.restartCSSAnimations();
