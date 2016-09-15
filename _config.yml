@@ -41,11 +41,3 @@ exclude:
 gems:
   - jekyll-feed
   - jekyll-sitemap
-
-navigation:
- - title: Projects
-   url: /projects
- - title: About
-   url: /about
- - title: Journal
-   url: /journal
