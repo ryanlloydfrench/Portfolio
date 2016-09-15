@@ -1,13 +1,15 @@
 nav {
-    position: relative;
     background-color: $bg-color-secondary;
     padding: 2.5rem 4rem;
-    z-index: 99;
+    @include small-tablet {
+        padding: 1.3rem 1.5rem;
+    }
 }
 
 .nav__logo {
     display: inline-block;
     float: left;
+    margin-top: 5px;
     &:hover,
     &:focus {
         svg {
@@ -18,16 +20,23 @@ nav {
         width: 35px;
         height: 35px;
         fill: $text-color;
+        @include small-tablet {
+            width: 26px;
+            height: 26px;
+        }
     }
 }
 
 .nav__links {
     list-style-type: none;
-    margin: 6px 0 0;
+    margin: 11px 0 0;
     padding: 0;
     display: inline-block;
     float: right;
     @extend .uppercase-text-small;
+    @include small-tablet {
+        display: none;
+    };
     li {
         display: inline-block;
         margin-right: 30px;

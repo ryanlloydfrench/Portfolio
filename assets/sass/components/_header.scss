@@ -5,8 +5,7 @@ header {
 .header {
     &__title {
         font-family: $ffmeta;
-        font-weight: 200;
-        font-size: 30px;
+        font-weight: $ffmeta-light;
         max-width: 800px;
         margin: 0 auto;
     }

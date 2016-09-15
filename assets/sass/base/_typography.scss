@@ -1,28 +1,79 @@
 $avenir: "Avenir Next W01";
-$ffmeta: "FF Meta Serif W01";
 $proximanova: "Proxima Nova W01";
+$ffmeta: "FF Meta Serif W01";
+
+$avenir-medium: 600;
+$proximanova-regular: 300;
+$proximanova-semibold: 400;
+$proximanova-bold: 500;
+$ffmeta-light: 200;
+$ffmeta-regular: 300;
+
+$font-size: 0.875em;
+$line-height: 1.45;
 
 body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: $avenir , "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-size: 17px;
-    font-weight: 600;
+    font-size: $font-size;
+    line-height: $line-height;
+    font-weight: $avenir-medium;
+}
+
+p {
+    margin-bottom: 1.3em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
+h1,
+.h1_size {
+  margin-top: 0;
+  font-size: 2.074em;
+}
+
+h2,
+.h2_size {
+    font-size: 1.728em;
+}
+
+h3,
+.h3_size {
+    font-size: 1.44em;
+}
+
+h4,
+.h4_size {
+    font-size: 1.2em;
+}
+
+small,
+.small {
+    font-size: 0.833em;
 }
 
 .uppercase-text-small {
     font-family: $proximanova;
-    font-weight: 500;
+    font-weight: $proximanova-bold;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-size: 14px;
+    font-size: $font-size;
+    line-height: $line-height;
 }
 
 .uppercase-text-large {
     font-family: $proximanova;
-    font-weight: 500;
+    font-weight: $proximanova-bold;
     text-transform: uppercase;
     letter-spacing: 3px;
-    font-size: 30px;
-    line-height: 40px;
+    @extend .h4_size;
+    line-height: $line-height;
 }
