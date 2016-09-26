@@ -1,5 +1,5 @@
 nav {
-    background-color: $bg-color-secondary;
+    background-color: $bg-color-light;
     padding: 2.5rem 4rem;
     @include small-tablet {
         padding: 1.3rem 1.5rem;
@@ -17,8 +17,8 @@ nav {
         }
     }
     svg {
-        width: 35px;
-        height: 35px;
+        width: 32px;
+        height: 32px;
         fill: $text-color;
         transition: fill $fast-transition;
         @include small-tablet {
@@ -42,7 +42,7 @@ nav {
         display: inline-block;
         margin-right: 30px;
         padding-bottom: 5px;
-        border-bottom: 2px solid $bg-color-secondary;
+        border-bottom: 2px solid $bg-color-light;
         transition: border-color $fast-transition;
         a {
             text-decoration: none;

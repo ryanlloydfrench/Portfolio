@@ -1,0 +1,117 @@
+.tile {
+    display: block;
+    background-color: $bg-color-dark;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 2rem;
+    &:before {
+        content: "";
+        display: block;
+        height: 0;
+        padding-top: 75%;
+    }
+    &__image {
+        width: auto;
+        max-height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__outer-wrap {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &__inner-wrap {
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
+    &--cinema-display {
+        .tile__outer-wrap {
+            padding: 3rem;
+        }
+    }
+    &--cinema-display-left {
+        .tile__outer-wrap {
+            padding: 3rem 3rem 3rem 0;
+        }
+        .tile__image {
+            left: -50px;
+            transform: translate(0%, -50%);
+        }
+    }
+    &--cinema-display-right {
+        .tile__outer-wrap {
+            padding: 3rem 0 3rem 3rem;
+        }
+        .tile__image {
+            left: auto;
+            right: -50px;
+            transform: translate(0%, -50%);
+        }
+    }
+    &--macbook {
+        .tile__outer-wrap {
+            padding: 3rem;
+        }
+        .tile__image {
+            max-width: 100%;
+            width: auto;
+            height: auto;
+        }
+    }
+    &--macbook-left {
+        .tile__outer-wrap {
+            padding: 3rem 3rem 3rem 0;
+        }
+        .tile__image {
+            left: -110px;
+            transform: translate(0%, -50%);
+            max-width: 100%;
+            width: auto;
+            height: auto;
+        }
+    }
+    &--macbook-right {
+        .tile__outer-wrap {
+            padding: 3rem 0 3rem 3rem;
+        }
+        .tile__image {
+            left: auto;
+            right: -110px;
+            transform: translate(0%, -50%);
+            max-width: 100%;
+            width: auto;
+            height: auto;
+        }
+    }
+    &--ipad {
+        .tile__outer-wrap {
+            padding: 4rem 3rem;
+        }
+        .tile__image {
+            max-width: 100%;
+            width: auto;
+            height: auto;
+        }
+    }
+    &--ipad-perspective {
+        .tile__outer-wrap {
+            padding: 4rem 3rem;
+        }
+        .tile__image {
+            max-width: 100%;
+            width: auto;
+            height: auto;
+        }
+    }
+
+
+}
