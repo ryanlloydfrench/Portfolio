@@ -6,7 +6,7 @@
     text-align: center;
     box-sizing: border-box;
     width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: .7rem;
     &:before {
         content: "";
         display: block;
@@ -112,6 +112,21 @@
             height: auto;
         }
     }
+}
 
-
+.tile__info {
+    margin-bottom: 3rem;
+    &__title {
+        margin: 0 0 .3rem;
+        @extend .h5_size;
+        display: inline-block;
+        padding-bottom: .3rem;
+        border-bottom: 2px solid $alt-color;
+    }
+    &__description {
+        margin: 0;
+        // @extend .h5_size;
+        font-family: $ffmeta;
+        font-weight: $ffmeta-regular;
+    }
 }
