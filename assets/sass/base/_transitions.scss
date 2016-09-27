@@ -23,11 +23,16 @@ $fast-transition: 300ms;
         @extend .animation-default;
         animation-name: logoFadeInDown;
     }
+    .animated-element--contentfadein {
+        @extend .animation-default;
+        animation-name: contentFadeIn;
+    }
     &.is-exiting {
         .animated-element--titlebreakfadeindown,
         .animated-element--titlefadeindown,
         .animated-element--logofadeindown,
-        .animated-element--navfadeindown {
+        .animated-element--navfadeindown,
+        .animated-element--contentfadein {
             animation-direction: alternate-reverse;
         }
     }
@@ -129,32 +134,52 @@ $fast-transition: 300ms;
   }
 }
 
+@-webkit-keyframes contentFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes contentFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 .header {
     &__title {
-        animation-delay: 140ms;
+        animation-delay: 340ms;
     }
     &__break {
-        animation-delay: 20ms;
+        animation-delay: 220ms;
     }
     &__sub-title {
-
+        animation-delay: 200ms;
     }
 }
 
 .nav__logo {
-    animation-delay: 220ms;
+    animation-delay: 420ms;
 }
 
 nav {
     ul li {
         &:nth-child(1) {
-            animation-delay: 300ms;
+            animation-delay: 500ms;
         }
         &:nth-child(2) {
-            animation-delay: 380ms;
+            animation-delay: 580ms;
         }
         &:nth-child(3) {
-            animation-delay: 460ms;
+            animation-delay: 660ms;
         }
     }
 }
