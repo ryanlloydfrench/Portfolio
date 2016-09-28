@@ -35,12 +35,12 @@
     }
     &--cinema-display {
         .tile__outer-wrap {
-            padding: 3rem;
+            padding: 2.8rem 3rem;
         }
     }
     &--cinema-display-left {
         .tile__outer-wrap {
-            padding: 3rem 3rem 3rem 0;
+            padding: 2.8rem 3rem 2.8rem 0;
         }
         .tile__image {
             left: -50px;
@@ -49,7 +49,7 @@
     }
     &--cinema-display-right {
         .tile__outer-wrap {
-            padding: 3rem 0 3rem 3rem;
+            padding: 2.8rem 0 2.8rem 3rem;
         }
         .tile__image {
             left: auto;
