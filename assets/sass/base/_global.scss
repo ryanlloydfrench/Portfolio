@@ -8,10 +8,9 @@ html {
   box-sizing: inherit;
 }
 
-::selection,
-::-moz-selection {
+::selection {
     color: white;
-    background-color: $alt-color;
+    background: $alt-color;
 }
 
 body {

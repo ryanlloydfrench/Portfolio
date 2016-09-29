@@ -21,5 +21,9 @@ header {
         height: 3px;
         background-color: $alt-color;
         margin: 1.2rem auto;
+        @include small-tablet {
+            height: 2px;
+            margin: 0.8rem auto;
+        }
     }
 }
