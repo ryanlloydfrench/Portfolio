@@ -152,7 +152,7 @@
             padding: 4rem 3rem;
             @include tablet {
                 padding: 3rem 2rem;
-            }   
+            }
         }
         .tile__image {
             max-width: 100%;
@@ -164,6 +164,9 @@
 
 .tile__info {
     margin-bottom: 3rem;
+    @include small-tablet {
+        margin-bottom: 1.5rem;
+    }
     &__title {
         margin: 0 0 .3rem;
         @extend .h5_size;

@@ -8,6 +8,9 @@ header {
         font-weight: $ffmeta-light;
         max-width: 800px;
         margin: 0 auto 4rem;
+        @include small-tablet {
+            margin: 0 auto 2rem;
+        }
     }
     &__sub-title {
         @extend .uppercase-text-large;

@@ -10,6 +10,7 @@ $ffmeta-light: 200;
 $ffmeta-regular: 300;
 
 $font-size: 0.875em;
+$font-size-mobile: 0.65rem;
 $line-height: 1.45;
 
 body {
@@ -19,6 +20,9 @@ body {
     font-size: $font-size;
     line-height: $line-height;
     font-weight: $avenir-medium;
+    @include small-tablet {
+        font-size: $font-size-mobile;
+    }
 }
 
 p {
