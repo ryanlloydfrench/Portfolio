@@ -1,0 +1,29 @@
+.spinner {
+  width: 30px;
+  height: 30px;
+  background-color: $alt-color;
+  animation: rotateplane 1.2s infinite ease-in-out;
+  opacity: 0;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin: -15px 0 0 -15px;
+  z-index: 99;
+  transition: opacity 1s;
+}
+
+.animated-scene.is-exiting {
+    .spinner {
+        opacity: 1;
+    }
+}
+
+@keyframes rotateplane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  } 50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+  } 100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
