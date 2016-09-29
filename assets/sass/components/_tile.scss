@@ -60,11 +60,17 @@
     &--cinema-display {
         .tile__outer-wrap {
             padding: 2.8rem 3rem;
+            @include tablet {
+                padding: 1.8rem 2rem;
+            }
         }
     }
     &--cinema-display-left {
         .tile__outer-wrap {
             padding: 2.8rem 3rem 2.8rem 0;
+            @include tablet {
+                padding: 1.8rem 2rem 1.8rem 0;
+            }
         }
         .tile__image {
             left: -50px;
@@ -74,6 +80,9 @@
     &--cinema-display-right {
         .tile__outer-wrap {
             padding: 2.8rem 0 2.8rem 3rem;
+            @include tablet {
+                padding: 1.8rem 0 1.8rem 2rem;
+            }
         }
         .tile__image {
             left: auto;
@@ -84,6 +93,9 @@
     &--macbook {
         .tile__outer-wrap {
             padding: 3rem;
+            @include tablet {
+                padding: 2rem;
+            }
         }
         .tile__image {
             max-width: 100%;
@@ -94,6 +106,9 @@
     &--macbook-left {
         .tile__outer-wrap {
             padding: 3rem 3rem 3rem 0;
+            @include tablet {
+                padding: 2rem 2rem 2rem 0;
+            }
         }
         .tile__image {
             left: -110px;
@@ -106,6 +121,9 @@
     &--macbook-right {
         .tile__outer-wrap {
             padding: 3rem 0 3rem 3rem;
+            @include tablet {
+                padding: 2rem 2rem 2rem 0;
+            }
         }
         .tile__image {
             left: auto;
@@ -119,6 +137,9 @@
     &--ipad {
         .tile__outer-wrap {
             padding: 4rem 3rem;
+            @include tablet {
+                padding: 3rem 2rem;
+            }
         }
         .tile__image {
             max-width: 100%;
@@ -129,6 +150,9 @@
     &--ipad-perspective {
         .tile__outer-wrap {
             padding: 4rem 3rem;
+            @include tablet {
+                padding: 3rem 2rem;
+            }   
         }
         .tile__image {
             max-width: 100%;
