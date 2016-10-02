@@ -1,10 +1,29 @@
 ---
 layout: default
-title: Journal –– Ryan French 
+title: Journal –– Ryan French
 ---
 
 <header>
-    <h1 class="header__sub-title animated-element--titlefadeindown">Journal</h1>
+    <h1 class="header__sub-title animated-element--titlefadeindown">Journal – Articles</h1>
     <div class="header__break animated-element--titlebreakfadeindown"></div>
-    <h2 class="header__title animated-element--titlefadeindown">Journal</h2>
 </header>
+
+<div class="row">
+
+    <div class="col-xs-12">
+
+        {% for post in site.posts %}
+            <article class="post-overview animated-element--contentfadein">
+                <span class="post-overview__date"><a href="{{ post.url }}">{{ post.date | date: '%B %d, %Y' }}</a></span>
+                <h1 class="post-overview__title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+                {% if post.categories %}
+                    {% for category in post.categories %}
+                        <span class="post-overview__category"><a href="/journal/category/{{ category }}/">{{ category }}</a></span>
+                    {% endfor %}
+                {% endif %}
+            </article>
+        {% endfor %}
+
+    </div>
+
+</div>

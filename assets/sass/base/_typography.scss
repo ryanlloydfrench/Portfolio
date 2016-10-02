@@ -32,10 +32,13 @@ p {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
   margin: 1.414em 0 0.5em;
   font-weight: inherit;
   line-height: 1.2;
+  font-family: $ffmeta;
+  font-weight: $ffmeta-light;
 }
 
 h1,
@@ -67,6 +70,15 @@ h5,
 small,
 .small {
     font-size: 0.833em;
+}
+
+.uppercase-text-extrasmall {
+    font-family: $proximanova;
+    font-weight: $proximanova-bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.733em;
+    line-height: $line-height;
 }
 
 .uppercase-text-small {
