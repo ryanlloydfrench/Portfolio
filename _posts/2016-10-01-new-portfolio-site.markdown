@@ -1,6 +1,7 @@
 ---
 layout: default
-title:  New portfolio site
+title:  New portfolio site – Ryan French
+post-title:  New portfolio site
 date:   2016-10-01
 categories: design
 permalink: /journal/:title/
@@ -14,7 +15,7 @@ permalink: /journal/:title/
 
             <header class="post-header">
                 <h2 class="post-header__sub-title animated-element--titlefadeindown">{{ page.date | date: '%B %d, %Y' }}</h2>
-                <h1 class="post-header__title animated-element--titlefadeindown">{{ page.title }}</h1>
+                <h1 class="post-header__title animated-element--titlefadeindown">{{ page.post-title }}</h1>
                 {% if page.categories %}
                     {% for category in page.categories %}
                         <span class="post-header__category animated-element--contentfadein"><a href="/journal/category/{{ category }}/">{{ category }}</a></span>
