@@ -3,7 +3,7 @@ layout: default
 ---
 
 <header>
-    <h1 class="header__sub-title animated-element--titlefadeindown">Category – {{ page.category }}</h1>
+    <h1 class="header__sub-title animated-element--titlefadeindown">{{ page.category }} – Articles</h1>
     <div class="header__break animated-element--titlebreakfadeindown"></div>
 </header>
 
@@ -12,7 +12,7 @@ layout: default
     <div class="col-xs-12">
 
         {% for post in site.categories[page.category] %}
-            <article class="post-overview">
+            <article class="post-overview animated-element--contentfadein">
                 <span class="post-overview__date"><a href="{{ post.url }}">{{ post.date | date: '%B %d, %Y' }}</a></span>
                 <h1 class="post-overview__title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
             </article>
