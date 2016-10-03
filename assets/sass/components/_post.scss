@@ -90,9 +90,37 @@
 .post__content {
     font-family: $ffmeta;
     font-weight: $ffmeta-light;
+    color: lighten($text-color, 12%);
     font-size: 1.2em;
     line-height: 1.7;
     a {
         text-decoration: underline;
+    }
+}
+
+.post-pagination {
+    text-align: center;
+    margin: 6rem 0 2rem;
+    @include small-tablet {
+        margin: 3rem 0 1rem;
+    }
+    &__button {
+        @extend .uppercase-text-extrasmall;
+        border-radius: 2px;
+        transition: background-color $fast-transition;
+        color: white;
+        background-color: $alt-color;
+        text-decoration: none;
+        padding: .2rem .4rem;
+        display: inline-block;
+        margin-bottom: .5rem;
+        &:hover,
+        &:focus {
+            background-color: darken($alt-color, 10%);
+        }
+    }
+    &__number {
+        @extend .uppercase-text-small;
+        display: block;
     }
 }
