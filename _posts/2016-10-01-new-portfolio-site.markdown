@@ -1,7 +1,7 @@
 ---
 layout: default
-title:  "Welcome to Jekyll!"
-date:   2016-10-02 09:37:58 +1300
+title:  New portfolio site
+date:   2016-10-01
 categories: design
 permalink: /journal/:title/
 ---
@@ -12,13 +12,20 @@ permalink: /journal/:title/
 
         <article>
 
-            <header>
-                <h2 class="post__sub-title animated-element--titlefadeindown">{{ page.date | date: '%B %d, %Y' }}</h2>
-                <div class="post__break animated-element--titlebreakfadeindown"></div>
-                <h1 class="post__title animated-element--titlefadeindown">{{ page.title | date: '%B %d, %Y' }}</h1>
+            <header class="post-header">
+                <h2 class="post-header__sub-title animated-element--titlefadeindown">{{ page.date | date: '%B %d, %Y' }}</h2>
+                <h1 class="post-header__title animated-element--titlefadeindown">{{ page.title }}</h1>
+                {% if page.categories %}
+                    {% for category in page.categories %}
+                        <span class="post-header__category animated-element--contentfadein"><a href="/journal/category/{{ category }}/">{{ category }}</a></span>
+                    {% endfor %}
+                {% endif %}
             </header>
 
             <div class="post__content animated-element--contentfadein">
+
+                <img src="https://placeimg.com/1200/480/nature" />
+
                 <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi ut placerat nisl, eu tristique augue. Quisque vel mauris nisi. Donec sollicitudin porttitor est, id iaculis nisi. Phasellus molestie mi sed <a>velit volutpat</a>, id congue tortor varius. Sed pretium est sit amet elit dapibus cursus. In a consectetur nulla, non imperdiet ex. Donec sed orci enim. Proin a placerat diam, ut iaculis lacus. Donec mollis fringilla pulvinar. Aenean odio ligula, vulputate vel risus nec, vehicula hendrerit mi. Proin iaculis suscipit pharetra.</p>
 
                 <p>Aenean auctor, elit non feugiat varius, sem libero feugiat nulla, nec pharetra nibh turpis ac nisl. Donec dignissim nibh quis ligula blandit blandit. Etiam sodales libero sit amet porttitor rhoncus. Duis eu mauris tellus. Morbi dictum gravida elit, ac dapibus purus maximus a. Duis fringilla magna sapien, vitae accumsan neque faucibus et. Aliquam faucibus nibh a velit sollicitudin congue. Vestibulum vulputate, arcu eget cursus aliquet, dolor sem facilisis neque, ac volutpat ante arcu id nisi. Maecenas at sem at ligula fermentum rutrum vel at massa. Aenean ac accumsan felis. Aenean blandit sit amet ante a hendrerit. In pretium euismod nibh. Duis et augue tortor.</p>
