@@ -1,9 +1,9 @@
 ---
 layout: default
-title:  New portfolio site – Ryan French
-post-title:  New portfolio site
+title:  New portfolio website – Ryan French
+post-title:  New portfolio website
 date:   2016-10-01
-categories: design
+categories: design development news
 permalink: /journal/:title/
 ---
 
@@ -25,17 +25,34 @@ permalink: /journal/:title/
 
             <div class="post__content animated-element--contentfadein">
 
-                <img src="https://placeimg.com/1200/480/nature" />
+                <p>Welcome to my new personal portfolio site. For the last month or two I have been working on re-designing and building my new portfolio and online journal. I am happy to say that I can finally push this site to production, it's ready! In this post I will discuss some of the design thinking, development technologies and frameworks that went into building this site.</p>
 
-                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi ut placerat nisl, eu tristique augue. Quisque vel mauris nisi. Donec sollicitudin porttitor est, id iaculis nisi. Phasellus molestie mi sed <a>velit volutpat</a>, id congue tortor varius. Sed pretium est sit amet elit dapibus cursus. In a consectetur nulla, non imperdiet ex. Donec sed orci enim. Proin a placerat diam, ut iaculis lacus. Donec mollis fringilla pulvinar. Aenean odio ligula, vulputate vel risus nec, vehicula hendrerit mi. Proin iaculis suscipit pharetra.</p>
+                <p>Let's start with design. I started fresh when I started designing my new portfolio site. In terms of personal identity, I have kept my previous logo because I wanted to keep my brand consistent with the past but keep my new portfolio fresh. The old portfolio can be seen in the image below:</p>
 
-                <p>Aenean auctor, elit non feugiat varius, sem libero feugiat nulla, nec pharetra nibh turpis ac nisl. Donec dignissim nibh quis ligula blandit blandit. Etiam sodales libero sit amet porttitor rhoncus. Duis eu mauris tellus. Morbi dictum gravida elit, ac dapibus purus maximus a. Duis fringilla magna sapien, vitae accumsan neque faucibus et. Aliquam faucibus nibh a velit sollicitudin congue. Vestibulum vulputate, arcu eget cursus aliquet, dolor sem facilisis neque, ac volutpat ante arcu id nisi. Maecenas at sem at ligula fermentum rutrum vel at massa. Aenean ac accumsan felis. Aenean blandit sit amet ante a hendrerit. In pretium euismod nibh. Duis et augue tortor.</p>
+                <img src="/assets/images/journal/old-portfolio.jpg" />
 
-                <p>Suspendisse potenti. In ornare malesuada sodales. Mauris molestie urna ex, vel consequat metus placerat in. Sed at accumsan eros, vel volutpat ligula. Duis mollis vitae dolor quis viverra. Ut ut dignissim nulla. Curabitur laoreet volutpat lacinia. Curabitur placerat urna ac augue laoreet pellentesque. Suspendisse potenti. Mauris eget purus quis velit fringilla sollicitudin. Aenean imperdiet lacinia condimentum. Etiam vel erat vel nisi suscipit porttitor vel aliquam ex. Duis tempor dolor dolor, non congue ex sodales et. Mauris porttitor faucibus eros ut ultricies. Nulla eget sapien blandit tortor dictum tempus. Quisque laoreet sem ac lectus accumsan tempus.</p>
+                <p>The grid I have chosen is a fluid 12 column grid which allowed me to design at specific breakpoints for mobile devices. The layout on large desktop devices has plenty of white space to aid in making the content easy to digest. When the viewport is below small tablets, the white space tightens up and screen space is used more efficiently so more can be displayed.</p>
 
-                <p>Donec gravida enim eget libero malesuada semper. Maecenas imperdiet egestas mollis. Morbi eleifend libero sapien, sit amet auctor purus condimentum vel. Integer id lacus ut erat consequat varius et condimentum leo. Aliquam imperdiet mattis diam vel aliquam. Integer vulputate nisi eu felis tincidunt accumsan. Suspendisse justo odio, vulputate sed dui at, dictum semper ipsum. Suspendisse consectetur, turpis id elementum vehicula, quam tortor fermentum purus, non elementum massa ante porttitor odio. Phasellus in urna placerat, eleifend orci sed, rhoncus nulla. In sagittis tempor neque a ullamcorper.</p>
+                <img src="/assets/images/journal/grid.jpg" />
 
-                <p>Pellentesque mi mi, porttitor in mi ut, venenatis egestas ex. Praesent felis orci, sodales in nunc at, blandit egestas lorem. Praesent quam nibh, ultricies ut augue nec, commodo lobortis nisl. Maecenas sodales nisi pellentesque erat facilisis, et euismod tellus vehicula. Suspendisse eu convallis sem, vel tincidunt purus. Nullam in consectetur risus. Phasellus dolor ante, feugiat quis dapibus et, pretium eget velit. Pellentesque et dictum leo. Donec rutrum risus ac magna viverra bibendum. Suspendisse convallis malesuada mattis. Etiam eget mi iaculis lectus pellentesque interdum. Morbi commodo lobortis egestas. In nisl sem, eleifend consequat ex eget, rhoncus egestas felis.</p>
+                <p>The color palette I have chosen is very simple. With 3 variants of grey for background colors, a body color for text and an alternate orange color to compliment the other colors. There are also some small variations of the 3 greys in shades or highlights. There are two typefaces used on my site, Proxima Nova and FF Meta. Proxima Nova comes in two weights, medium and bold. FF Meta comes in two weights, regular and light.</p>
+
+                <img src="/assets/images/journal/colors-typography.jpg" />
+
+                <p>Now let's discuss the technology behind my portfolio. I set out with the goal of optimizing my site for speed and performance while still maintaining great design and usability. I have built this using the <a target="_blank" href="https://jekyllrb.com/">Jekkyl framework</a> which is a static site generator with built-in blog functionality. This allowed me to get up and running fast with a clean codebase. </p>
+
+                <p>I'm using <a target="_blank" href="http://sass-lang.com/">Sass</a> as a css pre-processor. This allows me to write clean and modular css with minimal effort and keep things clean until the css is compiled. Each of the css components are split into partials like _tile.scss then imported into the main stylesheet. Modularizing the css allows me to quickly edit the css for a component without breaking or cascading styles into some other object.</p>
+
+                <p>The grid system I have chosen to use is the <a target="_blank" href="http://flexboxgrid.com/">Flexbox Grid</a>. Flexbox Grid is a fluid grid which is needed because I am developing this site to support a wide range of devices. The screen adapts to each viewport size. The grid has breakpoints for large screens, desktop, tablet, small-tablet and mobile. The grid system is also built on the display: flex technology now implemented in most modern browsers. It is much more performant and less bloated css.</p>
+
+                <p>I use <a target="_blank" href="https://mango.github.io/slideout/">Slideout</a> on when on mobile devices as a mobile friendly slide out menu. This allows the user to use touch actions to slide out a mobile menu from the right hand side of the viewport, making it easier to navigate on mobile devices.</p>
+
+                <p>The transitions between pages were done using <a target="_blank" href="https://github.com/miguel-perez/smoothState.js">Smoothstate</a>. This allowed me to create quick transitions between page loads to let the user know that the content is changing or loading. It also helps mask any loading time between pages. The transitions used are css transitions from <a target="_blank" href="https://daneden.github.io/animate.css/">Slideout</a> which is a css animation library. </p>
+
+                <p>I hope this article gives a bit of insight into the design and development of my new portfolio. Hopefully there is some knowledge I can pass on or libraries or plugins you might want to use on your next project. Feel free to take a look at the rest of the site. If you like what you have seen here or want to know more about me or my portfolio, please contact me at <a href="mailto:ryan.lloyd.french@gmail.com">ryan.lloyd.french@gmail.com</a>. I'm currently looking for new job opportunities.</p>
+
+                <p>Cheers,<br>Ryan.</p>
+
             </div>
 
         </article>

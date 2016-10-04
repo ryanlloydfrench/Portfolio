@@ -2,9 +2,7 @@ $avenir: "Avenir Next W01";
 $proximanova: "Proxima Nova W01";
 $ffmeta: "FF Meta Serif W01";
 
-$avenir-medium: 600;
-$proximanova-regular: 300;
-$proximanova-semibold: 400;
+$proximanova-medium: 400;
 $proximanova-bold: 500;
 $ffmeta-light: 200;
 $ffmeta-regular: 300;
@@ -16,10 +14,10 @@ $line-height: 1.45;
 body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-family: $avenir , "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-family: $ffmeta , "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-size: $font-size;
     line-height: $line-height;
-    font-weight: $avenir-medium;
+    font-weight: $ffmeta-light;
     @include small-tablet {
         font-size: $font-size-mobile;
     }

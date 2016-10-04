@@ -91,10 +91,13 @@
     font-family: $ffmeta;
     font-weight: $ffmeta-light;
     color: lighten($text-color, 12%);
-    font-size: 1.2em;
-    line-height: 1.7;
+    font-size: 1.3em;
+    line-height: 1.6;
     a {
         text-decoration: underline;
+    }
+    img {
+        margin: 1rem 0;
     }
 }
 

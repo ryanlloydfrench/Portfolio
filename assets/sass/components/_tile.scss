@@ -170,6 +170,8 @@
     &__title {
         margin: 0 0 .3rem;
         @extend .h5_size;
+        font-family: $proximanova;
+        font-weight: $proximanova-medium;
         display: inline-block;
         padding-bottom: .3rem;
         border-bottom: 2px solid $alt-color;
