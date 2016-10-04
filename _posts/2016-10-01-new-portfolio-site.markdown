@@ -11,7 +11,7 @@ permalink: /journal/:title/
 
     <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
 
-        <article>
+        <article class="post-wrapper">
 
             <header class="post-header">
                 <h2 class="post-header__sub-title animated-element--titlefadeindown">{{ page.date | date: '%B %d, %Y' }}</h2>
