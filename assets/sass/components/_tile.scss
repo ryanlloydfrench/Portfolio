@@ -20,6 +20,9 @@
                 transform: translate(-50%, -53%);
                 transition: transform $slow-transition;
             }
+            .tile__info__description {
+                color: $text-color;
+            }
             .tile--cinema-display-left,
             .tile--cinema-display-right,
             .tile--macbook-left,
@@ -179,6 +182,7 @@
     &__description {
         margin: 0;
         // @extend .h5_size;
+        color: $text-color;
         font-family: $ffmeta;
         font-weight: $ffmeta-regular;
     }

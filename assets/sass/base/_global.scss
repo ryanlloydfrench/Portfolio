@@ -22,6 +22,11 @@ body {
 
 a {
     color: $alt-color;
+    transition: color $fast-transition;
+    &:hover,
+    &:focus {
+        color: darken($alt-color, 10%);
+    }
 }
 
 .wrapper {

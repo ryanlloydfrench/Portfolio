@@ -31,7 +31,7 @@
             color: white;
             background-color: $alt-color;
             text-decoration: none;
-            padding: .2rem .4rem;
+            padding: .2rem .5rem;
             display: inline-block;
             &:hover,
             &:focus {
@@ -94,7 +94,7 @@
     font-family: $ffmeta;
     font-weight: $ffmeta-light;
     color: lighten($text-color, 12%);
-    font-size: 1.3em;
+    font-size: 1.2em;
     line-height: 1.6;
     a {
         text-decoration: underline;

@@ -34,6 +34,7 @@ $(document).ready(function() {
                     $container.removeClass('is-exiting');
                     $container.html($newContent);
                     initSlideout();
+                    initParticles();
                 }
             }
         },
@@ -52,5 +53,11 @@ $(document).ready(function() {
             slideout.close();
         }
     }
+
+    function initParticles() {
+        particlesJS.load('particles-js', '/assets/json/particles.json');
+    }
+
+    initParticles();
 
 });
