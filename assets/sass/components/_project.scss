@@ -1,0 +1,11 @@
+.project {
+    &__image {
+        margin-bottom: 4rem;
+        @include small-tablet {
+            margin-bottom: 2rem;
+        }
+    }
+    &__content {
+        text-align: center;
+    }
+}

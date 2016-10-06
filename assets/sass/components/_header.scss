@@ -14,6 +14,15 @@ header {
         @extend .uppercase-text-large;
         margin: 0;
     }
+    &__description {
+        max-width: 800px;
+        margin: 0 auto 3rem;
+        @extend .h5_size;
+        line-height: 1.6;
+        @include small-tablet {
+            margin: 0 auto 2rem;
+        }
+    }
     &__break {
         width: 80px;
         height: 3px;
