@@ -23,6 +23,9 @@
         margin-bottom: 2rem;
         position: relative;
         overflow: hidden;
+        @include phone {
+            height: 330px;
+        }
     }
     &__image-inner-container {
         position: relative;
@@ -55,7 +58,7 @@
         @extend .uppercase-text-extrasmall;
         padding: .2rem .5rem;
         border-radius: 2px;
-        margin-left: .3rem;
+        margin-right: .5rem;
         transition: background-color $fast-transition;
         &:hover,
         &:focus {
