@@ -49,6 +49,8 @@ permalink: /journal/:title/
 
                 <p>The transitions between pages were done using <a target="_blank" href="https://github.com/miguel-perez/smoothState.js">Smoothstate</a>. This allowed me to create quick transitions between page loads to let the user know that the content is changing or loading. It also helps mask any loading time between pages. The transitions used are css transitions from <a target="_blank" href="https://daneden.github.io/animate.css/">Slideout</a> which is a css animation library. </p>
 
+                <p>Retina images are handled automatically by <a target="_blank" href="http://imulus.github.io/retinajs/">Retina JS</a>. Retina JS automatically detects when the user is using a high resolution display and serves an image twice the size. Images now look sharp on retina devices and are efficiently handled.</p>
+
                 <p>I hope this article gives a bit of insight into the design and development of my new portfolio. Hopefully there is some knowledge I can pass on or libraries or plugins you might want to use on your next project. Feel free to take a look at the rest of the site. If you like what you have seen here or want to know more about me or my portfolio, please contact me at <a href="mailto:ryan.lloyd.french@gmail.com">ryan.lloyd.french@gmail.com</a>. I'm currently looking for new job opportunities.</p>
 
                 <p>Cheers,<br>Ryan.</p>
