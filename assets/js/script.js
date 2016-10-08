@@ -24,7 +24,9 @@ $(document).ready(function() {
                 render: function($container) {
                     $container.addClass('is-exiting');
                     smoothState.restartCSSAnimations();
-                    slideout.close();
+                    if ($(window).width() < 768) {
+                        slideout.close();
+                    }
                 }
             },
             onReady: {
@@ -59,7 +61,7 @@ $(document).ready(function() {
         if ($(window).width() < 768) {
             initSlideout();
         }
-        if ($(window).width() >= 768) {
+        if ($('#slideout-nav').hasClass('slideout-menu') && $(window).width() >= 768) {
             slideout.close();
         }
     }
