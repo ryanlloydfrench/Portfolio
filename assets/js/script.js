@@ -15,7 +15,6 @@ $(document).ready(function() {
             slideout.toggle();
         });
     }
-    initSlideout();
 
     var options = {
             prefetch: true,
@@ -33,7 +32,9 @@ $(document).ready(function() {
                 render: function($container, $newContent) {
                     $container.removeClass('is-exiting');
                     $container.html($newContent);
-                    initSlideout();
+                    if ($(window).width() < 768) {
+                        initSlideout();
+                    }
                     if(document.getElementById("particles-js")!=null){
                         initParticles();
                     }
@@ -44,7 +45,10 @@ $(document).ready(function() {
         smoothState = $('#animate-wrapper').smoothState(options).data('smoothState');
 
     var resizeId;
-    var windowSize = $(window).width();
+
+    if ($(window).width() < 768) {
+        initSlideout();
+    }
 
     $(window).resize(function() {
         clearTimeout(resizeId);
@@ -52,7 +56,10 @@ $(document).ready(function() {
     });
 
     function doneResizing() {
-        if (windowSize >= 768) {
+        if ($(window).width() < 768) {
+            initSlideout();
+        }
+        if ($(window).width() >= 768) {
             slideout.close();
         }
     }

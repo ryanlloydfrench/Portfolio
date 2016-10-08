@@ -23,6 +23,10 @@
     margin: 0;
     padding: 0;
     border-bottom: 2px solid $alt-color;
+    display: none;
+    @include small-tablet {
+        display: inherit;
+    }
     li {
         @extend .uppercase-text-small;
         margin-bottom: 1rem;
