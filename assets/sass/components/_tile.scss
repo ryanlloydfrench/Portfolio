@@ -29,6 +29,9 @@
             .tile--macbook-right {
                 .tile__image {
                     transform: translate(0%, -53%);
+                    @include small-tablet {
+                        transform: translate(-50%, -53%);
+                    }
                 }
             }
         }
@@ -66,6 +69,9 @@
             @include tablet {
                 padding: 1.8rem 2rem;
             }
+            @include small-tablet {
+                padding: 1.3rem 1.5rem;
+            }
         }
     }
     &--cinema-display-left {
@@ -74,10 +80,17 @@
             @include tablet {
                 padding: 1.8rem 2rem 1.8rem 0;
             }
+            @include small-tablet {
+                padding: 1.3rem 1.5rem;
+            }
         }
         .tile__image {
             left: -50px;
             transform: translate(0%, -50%);
+            @include small-tablet {
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
         }
     }
     &--cinema-display-right {
@@ -86,11 +99,19 @@
             @include tablet {
                 padding: 1.8rem 0 1.8rem 2rem;
             }
+            @include small-tablet {
+                padding: 1.3rem 1.5rem;
+            }
         }
         .tile__image {
             left: auto;
             right: -50px;
             transform: translate(0%, -50%);
+            @include small-tablet {
+                left: 50%;
+                right: auto;
+                transform: translate(-50%, -50%);
+            }
         }
     }
     &--macbook {
@@ -98,6 +119,9 @@
             padding: 3rem;
             @include tablet {
                 padding: 2rem;
+            }
+            @include small-tablet {
+                padding: 1rem;
             }
         }
         .tile__image {
@@ -112,6 +136,9 @@
             @include tablet {
                 padding: 2rem 2rem 2rem 0;
             }
+            @include small-tablet {
+                padding: 1rem;
+            }
         }
         .tile__image {
             left: -110px;
@@ -119,6 +146,10 @@
             max-width: 100%;
             width: auto;
             height: auto;
+            @include small-tablet {
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
         }
     }
     &--macbook-right {
@@ -126,6 +157,9 @@
             padding: 3rem 0 3rem 3rem;
             @include tablet {
                 padding: 2rem 2rem 2rem 0;
+            }
+            @include small-tablet {
+                padding: 1rem;
             }
         }
         .tile__image {
@@ -135,6 +169,11 @@
             max-width: 100%;
             width: auto;
             height: auto;
+            @include small-tablet {
+                left: 50%;
+                right: auto;
+                transform: translate(-50%, -50%);
+            }
         }
     }
     &--ipad {
@@ -143,18 +182,8 @@
             @include tablet {
                 padding: 3rem 2rem;
             }
-        }
-        .tile__image {
-            max-width: 100%;
-            width: auto;
-            height: auto;
-        }
-    }
-    &--ipad-perspective {
-        .tile__outer-wrap {
-            padding: 4rem 3rem;
-            @include tablet {
-                padding: 3rem 2rem;
+            @include small-tablet {
+                padding: 2rem 1rem;
             }
         }
         .tile__image {

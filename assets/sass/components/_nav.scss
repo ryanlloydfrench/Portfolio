@@ -1,6 +1,9 @@
 nav {
     background-color: $bg-color-light;
     padding: 2.5rem 4rem;
+    @include tablet {
+        padding: 2rem 2rem;
+    }
     @include small-tablet {
         padding: 1.3rem 1.5rem;
     }
