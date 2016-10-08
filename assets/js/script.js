@@ -35,6 +35,7 @@ $(document).ready(function() {
                     $container.html($newContent);
                     initSlideout();
                     initParticles();
+                    window.retinajs();
                 }
             }
         },
@@ -59,5 +60,7 @@ $(document).ready(function() {
     }
 
     initParticles();
+
+    window.retinajs();
 
 });

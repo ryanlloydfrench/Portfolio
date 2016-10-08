@@ -29,15 +29,15 @@ permalink: /journal/:title/
 
                 <p>Let's start with design. I started fresh when I started designing my new portfolio site. In terms of personal identity, I have kept my previous logo because I wanted to keep my brand consistent with the past but keep my new portfolio fresh. The old portfolio can be seen in the image below:</p>
 
-                <img src="/assets/images/journal/old-portfolio.jpg" />
+                <img src="/assets/images/journal/old-portfolio.jpg" data-rjs="2"/>
 
                 <p>The grid I have chosen is a fluid 12 column grid which allowed me to design at specific breakpoints for mobile devices. The layout on large desktop devices has plenty of white space to aid in making the content easy to digest. When the viewport is below small tablets, the white space tightens up and screen space is used more efficiently so more can be displayed.</p>
 
-                <img src="/assets/images/journal/grid.jpg" />
+                <img src="/assets/images/journal/grid.jpg" data-rjs="2"/>
 
                 <p>The color palette I have chosen is very simple. With 3 variants of grey for background colors, a body color for text and an alternate orange color to compliment the other colors. There are also some small variations of the 3 greys in shades or highlights. There are two typefaces used on my site, Proxima Nova and FF Meta. Proxima Nova comes in two weights, medium and bold. FF Meta comes in two weights, regular and light.</p>
 
-                <img src="/assets/images/journal/colors-typography.jpg" />
+                <img src="/assets/images/journal/colors-typography.jpg" data-rjs="2"/>
 
                 <p>Now let's discuss the technology behind my portfolio. I set out with the goal of optimizing my site for speed and performance while still maintaining great design and usability. I have built this using the <a target="_blank" href="https://jekyllrb.com/">Jekkyl framework</a> which is a static site generator with built-in blog functionality. This allowed me to get up and running fast with a clean codebase. </p>
 
