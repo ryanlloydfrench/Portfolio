@@ -244,7 +244,7 @@ module.exports = function(grunt) {
             dist: {
                 options: {
                     dir: '<%= app.dist %>/<%= app.baseurl %>',
-                    remote: 'git@github.com:ryanlloydfrench/ryanfrench-testsite.git',
+                    remote: 'git@github.com:ryanlloydfrench/ryanlloydfrench.github.io.git',
                     branch: 'master',
                     commit: true,
                     push: true,
@@ -275,7 +275,6 @@ module.exports = function(grunt) {
     grunt.registerTask('build', [
         'clean:dist',
         'jekyll:dist',
-        'imagemin',
         'svgmin',
         'sass:dist',
         'autoprefixer',
