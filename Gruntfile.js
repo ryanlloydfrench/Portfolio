@@ -74,13 +74,15 @@ module.exports = function(grunt) {
         clean: {
             server: [
                 '.jekyll',
-                '.tmp'
+                '.tmp',
+                '_site'
             ],
             dist: {
                 files: [{
                     dot: true,
                     src: [
                         '.tmp',
+                        '_site',
                         '<%= app.dist %>/*',
                         '!<%= app.dist %>/.git*'
                     ]
