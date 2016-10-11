@@ -17,4 +17,4 @@ Codebase for portfolio.
 1. Run ```grunt deploy```
 
 ## Notes
-Deploy location can be modified under the grunt-build-control options in the ```Gruntfile.js```.
+Deploy location can be modified under the buildcontrol options in the ```Gruntfile.js```.
