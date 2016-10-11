@@ -34,9 +34,9 @@ module.exports = function(grunt) {
                 },
                 files: [
                     '.jekyll/**/*.{html,yml,md,mkd,markdown}',
-                    '.tmp/<%= app.baseurl %>/css/*.css',
-                    '.tmp/<%= app.baseurl %>/js/*.js',
-                    '.tmp/<%= app.baseurl %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}'
+                    '.tmp/<%= app.baseurl %>/assets/css/*.css',
+                    '.tmp/<%= app.baseurl %>/assets/js/*.js',
+                    '.tmp/<%= app.baseurl %>/assets/images/**/*.{gif,jpg,jpeg,png,svg,webp}'
                 ]
             }
         },
