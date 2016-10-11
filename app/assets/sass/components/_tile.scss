@@ -1,0 +1,218 @@
+.tile {
+    display: block;
+    background-color: $bg-color-dark;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: .7rem;
+    &__link {
+        color: inherit;
+        text-decoration: none;
+        &:hover,
+        &:focus {
+            .tile {
+                background-color: darken($bg-color-dark, 3%);
+                transition: background-color $slow-transition;
+            }
+            .tile__image {
+                transform: translate(-50%, -53%);
+                transition: transform $slow-transition;
+            }
+            .tile__info__description {
+                color: $text-color;
+            }
+            .tile--cinema-display-left,
+            .tile--cinema-display-right,
+            .tile--macbook-left,
+            .tile--macbook-right {
+                .tile__image {
+                    transform: translate(0%, -53%);
+                    @include small-tablet {
+                        transform: translate(-50%, -53%);
+                    }
+                }
+            }
+        }
+    }
+    &:before {
+        content: "";
+        display: block;
+        height: 0;
+        padding-top: 75%;
+    }
+    &__image {
+        width: auto;
+        max-height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: transform $slow-transition;
+    }
+    &__outer-wrap {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &__inner-wrap {
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
+    &--cinema-display {
+        .tile__outer-wrap {
+            padding: 2.8rem 3rem;
+            @include tablet {
+                padding: 1.8rem 2rem;
+            }
+            @include small-tablet {
+                padding: 1.3rem 1.5rem;
+            }
+        }
+    }
+    &--cinema-display-left {
+        .tile__outer-wrap {
+            padding: 2.8rem 3rem 2.8rem 0;
+            @include tablet {
+                padding: 1.8rem 2rem 1.8rem 0;
+            }
+            @include small-tablet {
+                padding: 1.3rem 1.5rem;
+            }
+        }
+        .tile__image {
+            left: -50px;
+            transform: translate(0%, -50%);
+            @include small-tablet {
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+    &--cinema-display-right {
+        .tile__outer-wrap {
+            padding: 2.8rem 0 2.8rem 3rem;
+            @include tablet {
+                padding: 1.8rem 0 1.8rem 2rem;
+            }
+            @include small-tablet {
+                padding: 1.3rem 1.5rem;
+            }
+        }
+        .tile__image {
+            left: auto;
+            right: -50px;
+            transform: translate(0%, -50%);
+            @include small-tablet {
+                left: 50%;
+                right: auto;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+    &--macbook {
+        .tile__outer-wrap {
+            padding: 3rem;
+            @include tablet {
+                padding: 2rem;
+            }
+            @include small-tablet {
+                padding: 1rem;
+            }
+        }
+        .tile__image {
+            max-width: 100%;
+            width: auto;
+            height: auto;
+        }
+    }
+    &--macbook-left {
+        .tile__outer-wrap {
+            padding: 3rem 3rem 3rem 0;
+            @include tablet {
+                padding: 2rem 2rem 2rem 0;
+            }
+            @include small-tablet {
+                padding: 1rem;
+            }
+        }
+        .tile__image {
+            left: -110px;
+            transform: translate(0%, -50%);
+            max-width: 100%;
+            width: auto;
+            height: auto;
+            @include small-tablet {
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+    &--macbook-right {
+        .tile__outer-wrap {
+            padding: 3rem 0 3rem 3rem;
+            @include tablet {
+                padding: 2rem 2rem 2rem 0;
+            }
+            @include small-tablet {
+                padding: 1rem;
+            }
+        }
+        .tile__image {
+            left: auto;
+            right: -110px;
+            transform: translate(0%, -50%);
+            max-width: 100%;
+            width: auto;
+            height: auto;
+            @include small-tablet {
+                left: 50%;
+                right: auto;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+    &--ipad {
+        .tile__outer-wrap {
+            padding: 4rem 3rem;
+            @include tablet {
+                padding: 3rem 2rem;
+            }
+            @include small-tablet {
+                padding: 2rem 1rem;
+            }
+        }
+        .tile__image {
+            max-width: 100%;
+            width: auto;
+            height: auto;
+        }
+    }
+}
+
+.tile__info {
+    margin-bottom: 3rem;
+    @include small-tablet {
+        margin-bottom: 1.5rem;
+    }
+    &__title {
+        margin: 0 0 .3rem;
+        @extend .h5_size;
+        font-family: $proximanova;
+        font-weight: $proximanova-medium;
+        display: inline-block;
+        padding-bottom: .3rem;
+        border-bottom: 2px solid $alt-color;
+    }
+    &__description {
+        margin: 0;
+        // @extend .h5_size;
+        color: $text-color;
+        font-family: $ffmeta;
+        font-weight: $ffmeta-regular;
+    }
+}

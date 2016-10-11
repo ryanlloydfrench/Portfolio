@@ -1,0 +1,36 @@
+header {
+    text-align: center;
+}
+
+.header {
+    &__title {
+        max-width: 800px;
+        margin: 0 auto 4rem;
+        @include small-tablet {
+            margin: 0 auto 2rem;
+        }
+    }
+    &__sub-title {
+        @extend .uppercase-text-large;
+        margin: 0;
+    }
+    &__description {
+        max-width: 800px;
+        margin: 0 auto 3rem;
+        @extend .h5_size;
+        line-height: 1.6;
+        @include small-tablet {
+            margin: 0 auto 2rem;
+        }
+    }
+    &__break {
+        width: 80px;
+        height: 3px;
+        background-color: $alt-color;
+        margin: 1.2rem auto;
+        @include small-tablet {
+            height: 2px;
+            margin: 0.8rem auto;
+        }
+    }
+}

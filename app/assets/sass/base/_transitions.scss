@@ -1,0 +1,186 @@
+$fast-transition: 300ms;
+$slow-transition: 500ms;
+
+.animation-default {
+    animation-duration: 400ms;
+    animation-fill-mode: both;
+    transition:         all cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.animated-scene {
+    .animated-element--titlebreakfadeindown {
+        @extend .animation-default;
+        animation-name: titleBreakFadeInDown;
+    }
+    .animated-element--titlefadeindown {
+        @extend .animation-default;
+        animation-name: titleFadeInDown;
+    }
+    .animated-element--navfadeindown {
+        @extend .animation-default;
+        animation-name: navFadeInDown;
+    }
+    .animated-element--logofadeindown {
+        @extend .animation-default;
+        animation-name: logoFadeInDown;
+    }
+    .animated-element--contentfadein {
+        @extend .animation-default;
+        animation-name: contentFadeIn;
+    }
+    &.is-exiting {
+        .animated-element--titlebreakfadeindown,
+        .animated-element--titlefadeindown,
+        .animated-element--logofadeindown,
+        .animated-element--navfadeindown,
+        .animated-element--contentfadein {
+            animation-direction: alternate-reverse;
+        }
+    }
+}
+
+@-webkit-keyframes titleBreakFadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -1000%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes titleBreakFadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -1000%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@-webkit-keyframes titleFadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes titleFadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@-webkit-keyframes logoFadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes logoFadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@-webkit-keyframes navFadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -250%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes navFadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -250%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@-webkit-keyframes contentFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes contentFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.header {
+    &__title {
+        animation-delay: 340ms;
+    }
+    &__break {
+        animation-delay: 220ms;
+    }
+    &__sub-title {
+        animation-delay: 200ms;
+    }
+}
+
+.nav__logo {
+    animation-delay: 420ms;
+}
+
+nav {
+    ul li {
+        &:nth-child(1) {
+            animation-delay: 500ms;
+        }
+        &:nth-child(2) {
+            animation-delay: 580ms;
+        }
+        &:nth-child(3) {
+            animation-delay: 660ms;
+        }
+    }
+}

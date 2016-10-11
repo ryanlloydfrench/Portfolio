@@ -1,0 +1,151 @@
+.post-overview {
+    text-align: center;
+    padding: 2.5rem 0;
+    border-bottom: 2px solid darken($bg-color-dark, 4%);
+    @include small-tablet {
+        padding: 1.5rem 0;
+    }
+    &__title {
+        margin: .7rem 0 1.4rem;
+        a {
+            text-decoration: none;
+            color: $text-color;
+            &:hover,
+            &:focus {
+                color: darken($alt-color, 10%);
+            }
+        }
+    }
+    &__date {
+        @extend .uppercase-text-small;
+        a {
+            text-decoration: none;
+            color: $text-color;
+            &:hover,
+            &:focus {
+                color: darken($alt-color, 10%);
+            }
+        }
+    }
+    &__category {
+        @extend .uppercase-text-extrasmall;
+        margin-right: .3rem;
+        &:last-child {
+            margin-right: 0;
+        }
+        a {
+            border-radius: 2px;
+            transition: background-color $fast-transition;
+            color: white;
+            background-color: $alt-color;
+            text-decoration: none;
+            padding: .2rem .5rem;
+            display: inline-block;
+            &:hover,
+            &:focus {
+                background-color: darken($alt-color, 10%);
+            }
+        }
+    }
+}
+
+.post-header {
+    margin-bottom: 3rem;
+    @include small-tablet {
+        margin-bottom: 1.5rem;
+    }
+    &__title {
+        max-width: 800px;
+        margin: .5rem auto 1rem;
+        @include small-tablet {
+            margin: .5rem auto 1.2rem;
+        }
+    }
+    &__sub-title {
+        @extend .uppercase-text-large;
+        font-size: 1em;
+        margin: 0;
+    }
+    &__break {
+        width: 80px;
+        height: 3px;
+        background-color: $alt-color;
+        margin: 1.2rem auto;
+        @include small-tablet {
+            height: 2px;
+            margin: 0.8rem auto;
+        }
+    }
+    &__category {
+        @extend .uppercase-text-extrasmall;
+        margin-right: .3rem;
+        &:last-child {
+            margin-right: 0;
+        }
+        a {
+            border-radius: 2px;
+            transition: background-color $fast-transition;
+            color: white;
+            background-color: $alt-color;
+            text-decoration: none;
+            padding: .2rem .4rem;
+            display: inline-block;
+            &:hover,
+            &:focus {
+                background-color: darken($alt-color, 10%);
+            }
+        }
+    }
+}
+
+.post__content {
+    font-family: $ffmeta;
+    font-weight: $ffmeta-light;
+    color: lighten($text-color, 12%);
+    font-size: 1.2em;
+    line-height: 1.6;
+    a {
+        text-decoration: underline;
+    }
+    img {
+        margin: 1rem 0;
+    }
+}
+
+.post-pagination {
+    text-align: center;
+    margin: 6rem 0 2rem;
+    @include small-tablet {
+        margin: 3rem 0 1rem;
+    }
+    &__button {
+        @extend .uppercase-text-extrasmall;
+        border-radius: 2px;
+        transition: background-color $fast-transition;
+        color: white;
+        background-color: $alt-color;
+        text-decoration: none;
+        padding: .2rem .4rem;
+        display: inline-block;
+        margin-bottom: .5rem;
+        &:hover,
+        &:focus {
+            background-color: darken($alt-color, 10%);
+        }
+    }
+    &__number {
+        @extend .uppercase-text-small;
+        display: block;
+    }
+}
+
+.post-wrapper {
+    padding: 4rem 3rem;
+    background-color: $bg-color-light;
+    @include tablet {
+        padding: 3rem 2rem;
+    }
+    @include small-tablet {
+        padding: 2rem 1rem;
+    }
+}

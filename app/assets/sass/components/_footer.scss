@@ -1,0 +1,42 @@
+footer {
+    background-color: $bg-color-light;
+    padding: 3rem 4rem 8rem;
+    @include small-tablet {
+        padding: 2rem 1.5rem 3rem;
+    }
+}
+
+.footer__info {
+    &__title {
+        @extend .uppercase-text-small;
+        margin: 0 0 1.5rem;
+    }
+    &__list {
+        padding: 0 0 0;
+        margin: 0 0 1rem;
+        display: inline-block;
+        li {
+            list-style-type: none;
+            margin-bottom: .1rem;
+            @extend .small;
+            a {
+                color: lighten($text-color, 30%);
+                text-decoration: none;
+                transition: color $fast-transition;
+                &:hover,
+                &:focus {
+                    color: $alt-color;
+                }
+            }
+        }
+    }
+    &__break {
+        background-color: $alt-color;
+        height: 2px;
+        max-width: 250px;
+        @include small-tablet {
+            max-width: 100%;
+            margin-bottom: 1rem;
+        }
+    }
+}

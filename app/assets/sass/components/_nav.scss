@@ -1,0 +1,66 @@
+nav {
+    background-color: $bg-color-light;
+    padding: 2.5rem 4rem;
+    @include tablet {
+        padding: 2rem 2rem;
+    }
+    @include small-tablet {
+        padding: 1.3rem 1.5rem;
+    }
+}
+
+.nav__logo {
+    display: inline-block;
+    float: left;
+    margin-top: 5px;
+    &:hover,
+    &:focus {
+        svg {
+            fill: $alt-color;
+        }
+    }
+    svg {
+        width: 32px;
+        height: 32px;
+        fill: $text-color;
+        transition: fill $fast-transition;
+        @include small-tablet {
+            width: 26px;
+            height: 26px;
+        }
+    }
+}
+
+.nav__links {
+    list-style-type: none;
+    margin: 11px 0 0;
+    padding: 0;
+    display: inline-block;
+    float: right;
+    @extend .uppercase-text-small;
+    @include small-tablet {
+        display: none;
+    };
+    li {
+        display: inline-block;
+        margin-right: 30px;
+        padding-bottom: 5px;
+        border-bottom: 2px solid $bg-color-light;
+        transition: border-color $fast-transition;
+        a {
+            text-decoration: none;
+            color: $text-color;
+        }
+        &.active {
+            border-bottom-color: $alt-color;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+        &:hover,
+        &:focus {
+            border-bottom-color: $alt-color;
+            transition: border-color $fast-transition;
+        }
+    }
+}

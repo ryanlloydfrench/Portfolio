@@ -7,9 +7,14 @@
 
 # Site settings
 title: Ryan French
-description: Ryan French is a UI Designer & Front-End Developer from New Zealand. He crafts digital experiences that are both functional and beautiful where form always follows function.
+description: Ryan French is an Interactive Designer & Front-End Developer from New Zealand. He crafts digital experiences that are both functional and beautiful, where form always follows function.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://ryanfrench.me" # the base hostname & protocol for your site
+
+permalink: pretty
+
+paginate: 5
+paginate_path: "/journal/page-:num/"
 
 # Markdown settings
 markdown: kramdown
@@ -36,3 +41,4 @@ exclude:
 gems:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-paginate

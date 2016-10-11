@@ -1,0 +1,96 @@
+.particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.about {
+    &__title {
+        margin: 0;
+        display: inline-block;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid $alt-color;
+        margin-bottom: 2rem;
+        @extend .h2_size;
+    }
+    &__image-container {
+        width: 100%;
+        height: 500px;
+        background-color: $bg-color-dark;
+        padding: 3rem;
+        margin-bottom: 2rem;
+        position: relative;
+        overflow: hidden;
+        @include phone {
+            height: 330px;
+        }
+    }
+    &__image-inner-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    &__image {
+        position: absolute;
+        left: 50%;
+        bottom: -3rem;
+        transform: translateX(-50%);
+    }
+    &__sub-title {
+        @extend .uppercase-text-small;
+        margin: 0;
+    }
+    &__box {
+        border-bottom: 2px solid darken($bg-color-dark, 4%);
+        min-height: 270px;
+        margin-top: 2rem;
+        @include small-tablet {
+            min-height: auto;
+            margin-top: 1.5rem;
+        }
+    }
+    &__button {
+        color: white;
+        background-color: $alt-color;
+        text-decoration: none;
+        @extend .uppercase-text-extrasmall;
+        padding: .2rem .5rem;
+        border-radius: 2px;
+        margin-right: .5rem;
+        transition: background-color $fast-transition;
+        &:hover,
+        &:focus {
+            color: white;
+            background-color: darken($alt-color, 10%);
+        }
+    }
+    &__list {
+        list-style-type: none;
+        margin: 1.5rem 0;
+        padding: 0;
+        @include small-tablet {
+            margin: 1rem 0;
+        }
+        li {
+            margin-bottom: 1rem;
+            font-size: 1em;
+            font-family: $proximanova;
+            font-weight: $proximanova-medium;
+            a {
+                text-decoration: none;
+                color: $text-color;
+                &:hover,
+                &:focus {
+                    color: darken($alt-color, 10%);
+                }
+            }
+        }
+        &__date {
+            @extend .uppercase-text-small;
+            font-weight: $proximanova-medium;
+            display: block;
+        }
+    }
+}
