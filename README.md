@@ -3,9 +3,10 @@ Codebase for portfolio.
 
 ## Requirements
 1. Install Node
-2. Run ```npm install```
-4. Change directory into ```app```
-3. Run ```bundle install```
+3. Run ```gem install jekyll bundler```
+4. Run ```npm install```
+5. Change directory into ```app```
+6. Run ```bundle install```
 
 ## Local Development
 1. Run ```grunt```
