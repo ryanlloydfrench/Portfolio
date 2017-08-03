@@ -38,7 +38,7 @@ exclude:
   - node_modules
 
 # Plugin settings
-gems:
+plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-paginate
